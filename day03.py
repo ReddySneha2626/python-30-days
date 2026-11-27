@@ -30,7 +30,29 @@
 # print("invalid " in error_message)
 # print("=" *30)
 
-name =input("Please enter a raw test name: ")
-print(name.strip())
-print(name.lower())
+# raw_name =input("Please enter a raw test name: ")
+# corrected_name = raw_name.strip()
+# corrected_name = corrected_name.lower()
+# corrected_name = corrected_name.capitalize()
+# corrected_name = corrected_name.replace("_test","")
+# corrected_name = corrected_name.replace("_"," ")
+# is_login_test = "login" in corrected_name.lower()
+# print(corrected_name)
 
+
+raw_name = input("Please enter a raw test name: ")
+
+corrected_name = raw_name.strip()
+corrected_name = corrected_name.lower()
+corrected_name = corrected_name.capitalize()
+corrected_name = corrected_name.replace("_test", "")
+corrected_name = corrected_name.replace("_", " ")
+
+is_login_test = "login" in corrected_name.lower()
+
+print("-" * 30)
+print(f"Raw Name      : {raw_name}")
+print(f"Clean Name    : {corrected_name}")
+print(f"Length        : {len(corrected_name)} characters")
+print(f"Is Login Test : {is_login_test}")
+print("-" * 30)
